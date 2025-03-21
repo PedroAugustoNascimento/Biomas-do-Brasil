@@ -1,0 +1,169 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-image: linear-gradient(to right, #462523, #cb9b51 22%, #f6e27a 45%, #f6f2c0 50%, #f6e27a 55%, #cb9b51 78%, #462523);
+    color: white;
+    flex-wrap: nowrap;
+}
+
+.navbar-container {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+#greeting, #Bioms-nav {
+    margin: 0 15px;
+    text-align: center;
+    display: inline-block;
+}
+
+#Bioms-nav {
+    display: flex;
+    gap: 15px;
+}
+
+#Bioms-nav a {
+    text-decoration: none;
+    color: white;
+    display: inline-block;
+    padding: 5px 10px;
+}
+
+#menu-btn {
+    background-color: #524621;
+    padding: 8px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-left: auto;
+}
+
+#menu-btn:hover {
+    background-color: #be9413;
+}
+
+#dropdown-menu {
+    font-size: 15px;
+    position: absolute;
+    top: 60px;
+    right: 10px;
+    background-color: #be9413;
+    list-style: none;
+    padding: 10px;
+    border-radius: 5px;
+    display: none;
+}
+
+#dropdown-menu li {
+    margin: 10px 0;
+}
+
+main {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    text-align: left;
+    padding: 20px;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+#Texto {
+    background-color: whitesmoke;
+    max-width: 50%;
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 0px 0px 13px 2px rgba(0,0,0,0.75);
+    padding: 20px;
+}
+
+main p {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+#Fotos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    max-width: 40%;
+}
+
+#Fotos img {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 0px 0px 13px 2px rgba(0,0,0,0.75);
+}
+
+footer {
+    background-color: lightgrey;
+    color: #45474B;
+    text-align: center;
+    padding: 10px;
+    width: 100%;
+    position: relative;
+    font-size: 1rem;
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        flex-wrap: wrap;
+    }
+    
+    #greeting, #Bioms-nav {
+        margin: 5px;
+    }
+    
+    main {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    #Texto, #Fotos {
+        max-width: 90%;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.8rem;
+        letter-spacing: 0.1rem;
+    }
+
+    form input {
+        width: 100%;
+        padding: 0.8rem;
+    }
+
+    form button {
+        padding: 0.6rem 1rem;
+        font-size: 0.9rem;
+    }
+
+    footer {
+        font-size: 0.9rem;
+    }
+}

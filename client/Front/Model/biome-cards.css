@@ -1,0 +1,138 @@
+/* Estilos para os cards de informações do bioma */
+
+.biome-info {
+     max-width: 1200px;
+     margin: 3rem auto;
+     padding: 0 1.5rem;
+   }
+   
+   .biome-title {
+     color: #1b5e20;
+     font-size: 2.5rem;
+     text-align: center;
+     margin-bottom: 2rem;
+     font-weight: 700;
+     position: relative;
+     padding-bottom: 0.5rem;
+   }
+   
+   .biome-title::after {
+     content: "";
+     position: absolute;
+     bottom: 0;
+     left: 50%;
+     transform: translateX(-50%);
+     width: 80px;
+     height: 4px;
+     background-color: #1b5e20;
+     border-radius: 2px;
+   }
+   
+   .info-grid {
+     display: grid;
+     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+     gap: 2rem;
+     margin-top: 2rem;
+   }
+   
+   .info-card {
+     background-color: #fff;
+     border-radius: 12px;
+     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+     overflow: hidden;
+     transition: transform 0.3s ease, box-shadow 0.3s ease;
+     position: relative;
+     border-top: 5px solid #1b5e20;
+   }
+   
+   .info-card:hover {
+     transform: translateY(-5px);
+     box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+   }
+   
+   .card-icon {
+     background-color: #e8f5e9;
+     padding: 1.5rem;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     font-size: 2.5rem;
+     color: #1b5e20;
+   }
+   
+   .info-card h2 {
+     color: #1b5e20;
+     font-size: 1.5rem;
+     margin: 0;
+     padding: 1.5rem 1.5rem 0.5rem;
+     font-weight: 600;
+     position: relative;
+   }
+   
+   .info-card p {
+     padding: 0 1.5rem 1.5rem;
+     color: #555;
+     line-height: 1.7;
+     font-size: 1rem;
+   }
+   
+   /* Estilos específicos para cada card */
+   .info-card.description {
+     border-top-color: #2e7d32;
+   }
+   
+   .info-card.location {
+     border-top-color: #388e3c;
+   }
+   
+   .info-card.climate {
+     border-top-color: #43a047;
+   }
+   
+   .info-card.fauna {
+     border-top-color: #4caf50;
+   }
+   
+   .info-card.flora {
+     border-top-color: #66bb6a;
+   }
+   
+   /* Ícones personalizados para cada card */
+   .info-card.description .card-icon::before {
+     content: "🌳";
+     font-size: 2.5rem;
+   }
+   
+   .info-card.location .card-icon::before {
+     content: "📍";
+     font-size: 2.5rem;
+   }
+   
+   .info-card.climate .card-icon::before {
+     content: "☁️";
+     font-size: 2.5rem;
+   }
+   
+   .info-card.fauna .card-icon::before {
+     content: "🐆";
+     font-size: 2.5rem;
+   }
+   
+   .info-card.flora .card-icon::before {
+     content: "🌿";
+     font-size: 2.5rem;
+   }
+   
+   /* Responsividade */
+   @media (max-width: 768px) {
+     .info-grid {
+       grid-template-columns: 1fr;
+       gap: 1.5rem;
+     }
+   
+     .biome-title {
+       font-size: 2rem;
+     }
+   }
+   
+   

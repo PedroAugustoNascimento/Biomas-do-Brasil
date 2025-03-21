@@ -1,0 +1,90 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
+// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id           String   @id @default(uuid())
+  isAdmin      Boolean  @default(false)
+  name         String
+  email        String   @unique
+  password     String
+  profileImage String? // URL da imagem de perfil
+  bio          String?  @db.Text
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+
+  // Relacionamentos
+  posts    Post[]
+  comments Comment[]
+}
+
+model Biome {
+  id                     String   @id @default(uuid())
+  name                   String   @unique
+  introduction           String   @db.Text
+  generalCharacteristics String   @db.Text
+  naturalResources       String   @db.Text
+  environmentalProblems  String   @db.Text
+  conservation           String   @db.Text
+  createdAt              DateTime @default(now())
+  updatedAt              DateTime @updatedAt
+
+  // Relacionamentos
+  images BiomeImage[]
+  posts  Post[]
+}
+
+model BiomeImage {
+  id          String   @id @default(uuid())
+  url         String
+  description String?
+  createdAt   DateTime @default(now())
+
+  // Relacionamentos
+  biome   Biome  @relation(fields: [biomeId], references: [id], onDelete: Cascade)
+  biomeId String
+}
+
+model Post {
+  id        String   @id @default(uuid())
+  title     String
+  content   String   @db.Text
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  // Relacionamentos
+  author   User      @relation(fields: [authorId], references: [id])
+  authorId String
+  biome    Biome?    @relation(fields: [biomeId], references: [id])
+  biomeId  String?
+  comments Comment[]
+}
+
+model Comment {
+  id        String   @id @default(uuid())
+  content   String   @db.Text
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  // Relacionamentos
+  author   User   @relation(fields: [authorId], references: [id])
+  authorId String
+  post     Post   @relation(fields: [postId], references: [id], onDelete: Cascade)
+  postId   String
+
+  // Relacionamento para comentários aninhados
+  parentComment   Comment?  @relation("CommentReplies", fields: [parentCommentId], references: [id], onDelete: Cascade)
+  parentCommentId String?
+  replies         Comment[] @relation("CommentReplies")
+}

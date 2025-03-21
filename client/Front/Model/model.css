@@ -1,0 +1,765 @@
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin-bottom: 60px; /* Reduzido para acompanhar o novo tamanho do footer */
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px; /* Reduzido de 20px para 10px */
+    z-index: 1000;
+    font-size: 0.9em; /* Reduz o tamanho da fonte */
+}
+
+footer p {
+    margin: 2px 0; /* Reduz o espaçamento entre as linhas */
+}
+
+/* Navbar Styles */
+.navbar {
+    background-color: #ffffff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+}
+
+.navbar-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0.8rem 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Logo */
+.nav-logo {
+    display: flex;
+    align-items: center;
+}
+
+.nav-logo img {
+    transition: transform 0.3s ease;
+}
+
+.nav-logo:hover img {
+    transform: scale(1.05);
+}
+
+/* Nav Content */
+.nav-content {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    flex-grow: 1;
+    margin: 0 2rem;
+}
+
+/* Greeting */
+.greeting {
+    color: #2ea082;
+    font-weight: 500;
+}
+
+/* Nav Links */
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.nav-link {
+    color: #333;
+    text-decoration: none;
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+}
+
+.nav-link:hover {
+    color: #2ea082;
+    background-color: rgba(46, 160, 130, 0.1);
+}
+
+/* Dropdown */
+.nav-dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropbtn {
+    color: #333;
+    background: none;
+    border: none;
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+}
+
+.dropbtn:hover {
+    color: #2ea082;
+    background-color: rgba(46, 160, 130, 0.1);
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #fff;
+    min-width: 200px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+    border-radius: 8px;
+    padding: 0.5rem;
+    z-index: 1;
+}
+
+.nav-dropdown:hover .dropdown-content {
+    display: block;
+    animation: fadeIn 0.3s ease;
+}
+
+.dropdown-content a {
+    color: #333;
+    padding: 0.8rem 1rem;
+    text-decoration: none;
+    display: block;
+    border-radius: 4px;
+    transition: all 0.2s ease;
+}
+
+.dropdown-content a:hover {
+    background-color: rgba(46, 160, 130, 0.1);
+    color: #2ea082;
+}
+
+/* User Menu */
+.nav-user {
+    position: relative;
+}
+
+.profile-btn {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem;
+    border-radius: 50px;
+     background-color: #1b5e20;
+     color: white;
+ }
+ 
+ #img-nav {
+     color: #1b5e20;
+ }
+ 
+ #Bioms-nav a {
+     text-decoration: none !important;
+     color: white !important;
+ }
+ 
+ #menu-btn {
+     background-color: #1b5e20;
+ }
+ 
+ #menu-btn:hover {
+     background-color: rgb(10, 55, 13);
+ }
+ 
+ #menu-btn:focus {
+     background-color: rgb(10, 55, 13);
+ }
+ 
+ #dropdown-menu {
+     background-color: rgb(10, 55, 13);
+ }
+
+/* Estilo para a seção de posts */
+.posts-section {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 0 20px;
+}
+
+.posts-section h2 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+/* Estilo para cada post */
+.post {
+    background-color: #ffffff;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 30px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* Cabeçalho do post */
+.post-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 15px;
+}
+
+.avatar-small {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 10px;
+}
+
+.post-info {
+    flex-grow: 1;
+}
+
+.author {
+    font-weight: bold;
+    color: #333;
+    margin: 0;
+}
+
+.post-date {
+    font-size: 0.9em;
+    color: #666;
+}
+
+/* Conteúdo do post */
+.post-content {
+    margin-bottom: 20px;
+}
+
+.post-content h4 {
+    font-size: 1.2em;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.post-content p {
+    color: #444;
+    line-height: 1.6;
+}
+
+/* Seção de comentários */
+.comments-section {
+    margin-top: 20px;
+    border-top: 1px solid #e0e0e0;
+    padding-top: 20px;
+}
+
+.comments-section h5 {
+    font-size: 1.1em;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+/* Estilo para comentários */
+.comment {
+    background-color: #f8f9fa;
+    border-left: 4px solid #2ea082;
+    padding: 15px;
+    margin: 15px 0;
+    border-radius: 0 8px 8px 0;
+}
+
+.comment-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.comment-info {
+    flex-grow: 1;
+}
+
+.comment-author {
+    font-weight: bold;
+    color: #333;
+    margin: 0;
+}
+
+.comment-date {
+    font-size: 0.85em;
+    color: #666;
+}
+
+.comment-content {
+    color: #444;
+    line-height: 1.5;
+    margin-bottom: 10px;
+}
+
+/* Respostas aos comentários */
+.comment-replies {
+    margin-left: 30px;
+    padding-left: 15px;
+    border-left: 2px solid #e0e0e0;
+}
+
+.comment.reply {
+    background-color: #ffffff;
+    border-left: 4px solid #3fb795;
+    margin: 10px 0;
+}
+
+/* Formulário de comentários */
+.add-comment {
+    margin-top: 15px;
+    padding: 10px;
+    background-color: #f8f9fa;
+    border-radius: 4px;
+}
+
+.add-comment textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    resize: vertical;
+    min-height: 60px;
+    font-family: inherit;
+}
+
+.add-comment textarea:focus {
+    outline: none;
+    border-color: #2ea082;
+    box-shadow: 0 0 0 2px rgba(46, 160, 130, 0.25);
+}
+
+.add-comment button {
+    background-color: #2ea082;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.9em;
+    transition: background-color 0.2s;
+}
+
+.add-comment button:hover {
+    background-color: #248668;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .posts-section {
+        padding: 0 15px;
+    }
+
+    .post {
+        padding: 15px;
+    }
+
+    .comment-replies {
+        margin-left: 15px;
+        padding-left: 10px;
+    }
+
+    .avatar {
+        width: 40px;
+        height: 40px;
+    }
+
+    .avatar-small {
+        width: 30px;
+        height: 30px;
+    }
+}
+
+/* Animações */
+.post, .comment {
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.post:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.add-comment button {
+    transition: all 0.2s ease;
+}
+
+.add-comment button:active {
+    transform: scale(0.98);
+}
+
+/* Para os comentários de resposta, usando uma variação mais suave do verde */
+.comment.reply {
+    background-color: #ffffff;
+    border-left: 4px solid #3fb795;
+    margin: 10px 0;
+}
+
+/* Se houver outros elementos que precisem de cor de destaque */
+a {
+    color: #2ea082;
+}
+
+a:hover {
+    color: #248668;
+}
+
+/* Qualquer outro elemento que use a cor azul como destaque */
+.highlight {
+    color: #2ea082;
+}
+
+/* Para estados ativos ou foco */
+.active {
+    background-color: #2ea082;
+}
+
+/* Para bordas ou outros elementos decorativos */
+.bordered {
+    border-color: #2ea082;
+}
+
+/* Adicione no head do HTML o link para o Font Awesome */
+/* <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"> */
+
+.biome-info {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.biome-title {
+    text-align: center;
+    font-size: 2.5em;
+    color: #2ea082;
+    margin-bottom: 40px;
+    position: relative;
+}
+
+.biome-title::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 4px;
+    background-color: #2ea082;
+    margin: 15px auto;
+    border-radius: 2px;
+}
+
+.info-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    padding: 20px 0;
+}
+
+.info-card {
+    background: #ffffff;
+    border-radius: 15px;
+    padding: 25px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.info-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(46, 160, 130, 0.2);
+}
+
+.card-icon {
+    background-color: rgba(46, 160, 130, 0.1);
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.card-icon i {
+    font-size: 24px;
+    color: #2ea082;
+}
+
+.info-card h2 {
+    color: #2ea082;
+    font-size: 1.5em;
+    margin-bottom: 15px;
+    position: relative;
+}
+
+.info-card p {
+    color: #555;
+    line-height: 1.6;
+    font-size: 1.1em;
+}
+
+/* Estilos específicos para cada card */
+.info-card.description {
+    border-top: 4px solid #2ea082;
+}
+
+.info-card.location {
+    border-top: 4px solid #3fb795;
+}
+
+.info-card.climate {
+    border-top: 4px solid #4ecba5;
+}
+
+.info-card.fauna {
+    border-top: 4px solid #5ddbb5;
+}
+
+.info-card.flora {
+    border-top: 4px solid #6cebb5;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .biome-title {
+        font-size: 2em;
+    }
+
+    .info-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .info-card {
+        padding: 20px;
+    }
+}
+
+/* Animação de entrada */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.info-card {
+    animation: fadeInUp 0.5s ease forwards;
+    opacity: 0;
+}
+
+.info-card:nth-child(1) { animation-delay: 0.1s; }
+.info-card:nth-child(2) { animation-delay: 0.2s; }
+.info-card:nth-child(3) { animation-delay: 0.3s; }
+.info-card:nth-child(4) { animation-delay: 0.4s; }
+.info-card:nth-child(5) { animation-delay: 0.5s; }
+
+/* Carrossel Styles */
+.carousel-section {
+    width: 100%;
+    margin: 80px 0 40px; /* Ajuste o margin-top considerando a navbar fixa */
+    background-color: #f8f9fa;
+    padding: 20px 0;
+}
+
+.carousel-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.carousel {
+    position: relative;
+    overflow: hidden;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+.carousel-track {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel-slide {
+    flex: 0 0 100%;
+    position: relative;
+}
+
+.carousel-slide img {
+    width: 100%;
+    height: 600px;
+    object-fit: cover;
+}
+
+.slide-caption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 30px;
+    background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
+    color: white;
+    transform: translateY(100%);
+    transition: transform 0.5s ease;
+}
+
+.carousel-slide:hover .slide-caption {
+    transform: translateY(0);
+}
+
+.slide-caption h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.slide-caption p {
+    font-size: 16px;
+    opacity: 0.9;
+}
+
+/* Botões de navegação */
+.carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(255, 255, 255, 0.8);
+    border: none;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    opacity: 0;
+}
+
+.carousel:hover .carousel-btn {
+    opacity: 1;
+}
+
+.carousel-btn:hover {
+    background-color: #2ea082;
+    color: white;
+}
+
+.carousel-btn.prev {
+    left: 20px;
+}
+
+.carousel-btn.next {
+    right: 20px;
+}
+
+.carousel-btn i {
+    font-size: 20px;
+}
+
+/* Dots de navegação */
+.carousel-dots {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+    z-index: 1;
+}
+
+.dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    border: 2px solid white;
+    background: transparent;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    padding: 0;
+}
+
+.dot.active {
+    background-color: white;
+    transform: scale(1.2);
+}
+
+.dot:hover {
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+/* Animações */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .carousel-slide img {
+        height: 400px;
+    }
+
+    .slide-caption {
+        padding: 20px;
+    }
+
+    .slide-caption h3 {
+        font-size: 20px;
+    }
+
+    .slide-caption p {
+        font-size: 14px;
+    }
+
+    .carousel-btn {
+        width: 40px;
+        height: 40px;
+    }
+}
+
+@media (max-width: 480px) {
+    .carousel-slide img {
+        height: 300px;
+    }
+
+    .carousel-btn {
+        display: none;
+    }
+}
+

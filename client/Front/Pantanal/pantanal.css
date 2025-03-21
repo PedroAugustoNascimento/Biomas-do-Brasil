@@ -1,0 +1,111 @@
+.navbar {
+    background-color: #4c6c92;
+    color: white;
+}
+
+#img-nav {
+    color: #4c6c92;
+}
+
+#Bioms-nav a {
+    text-decoration: none !important;
+    color: white !important;
+}
+
+#menu-btn {
+    background-color: #4c6c92;
+}
+
+#menu-btn:hover {
+    background-color: rgb(72, 75, 175);
+}
+
+#menu-btn:focus {
+    background-color: rgb(72, 75, 175);
+}
+
+#dropdown-menu {
+    background-color: rgb(72, 75, 175);
+}
+
+/* Estilo das caixas informativas */
+.content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.info-box {
+    background-color: #ffffff;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
+    width: 45%;
+}
+
+.info-box.left {
+    align-self: flex-start;
+}
+
+.info-box.right {
+    align-self: flex-end;
+}
+
+.info-box:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.info-box h2 {
+    color: #2c3e50;
+    margin-bottom: 15px;
+    font-size: 24px;
+}
+
+.info-box h3 {
+    color: #34495e;
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+
+.info-box p {
+    color: #555;
+    line-height: 1.6;
+    font-size: 16px;
+}
+
+.info-box .introduction {
+    font-style: italic;
+    color: #777;
+}
+
+.posts {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  .comment {
+    border-bottom: 1px solid #ddd;
+    padding: 10px 0;
+  }
+  .comment-author {
+    font-weight: bold;
+    color: #065fd4;
+  }
+  .comment-title {
+    font-size: 1.2em;
+    margin: 5px 0;
+  }
+  .comment-content {
+    color: #333;
+    margin: 5px 0;
+  }
+  .comment-biome {
+    font-size: 0.9em;
+    color: #666;
+  }

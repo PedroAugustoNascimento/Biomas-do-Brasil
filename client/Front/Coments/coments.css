@@ -1,0 +1,158 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal; 
+}
+
+body {
+    margin: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: lightseagreen;
+    color: white;
+}
+
+#img-nav {
+    color: lightseagreen;
+}
+
+.navbar-container {
+    position: relative;
+}
+
+#greeting {
+    display: inline-flex;
+    margin-left: 50px;
+    margin-bottom: 10px;
+    letter-spacing: 1.8px;
+}
+
+#Bioms-nav {
+    display: inline-block;
+    letter-spacing: 1.8px;
+    margin-left: 50px;
+    justify-content: space-between;
+    word-spacing: 10px;
+}
+
+#Bioms-nav a {
+    text-decoration: none !important;
+    color: white !important;
+}
+
+#menu-btn {
+    background-color: lightseagreen;
+    padding: 5px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    justify-content: flex-end;
+}
+
+#menu-btn:hover {
+    background-color: rgb(58, 127, 132);
+}
+
+#menu-btn:focus {
+    background-color: rgb(58, 127, 132);
+}
+
+#dropdown-menu {
+    font-size: 15px;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    background-color: rgb(58, 127, 132);
+    list-style: none;
+    margin: 0;
+    padding: 10px;
+    border-radius: 5px;
+    display: none;
+    align-items: baseline;
+    right: 10px;
+}
+
+#dropdown-menu li {
+    margin: 10px 0px 10px 20px;
+}
+
+#dropdown-menu li a {
+    color: white;
+    text-decoration: none;
+}
+
+main {
+    margin: 75px;
+    display: inline-flex;
+}
+
+#FotoPerfil {
+    width: 350px;
+    height: 350px;
+    border: none;
+    border-radius: 15px;
+    -webkit-box-shadow: 0px 0px 13px 2px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 13px 2px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 13px 2px rgba(0,0,0,0.75);
+}
+
+#DadosPerfil {
+    margin-left: 15px;
+}
+
+#DadosPerfil p {
+    font-size: 20px;
+    
+}
+
+footer {
+    background-color: lightgrey;
+    color: #45474B;
+    text-align: center;
+    padding: 0;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    font-size: 1rem;
+}
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2rem;
+        letter-spacing: 0.2rem;
+    }
+
+    form input {
+        width: 25rem;
+        padding: 0.8rem;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.8rem;
+        letter-spacing: 0.1rem;
+    }
+
+    form input {
+        width: 17rem;
+    }
+
+    form button {
+        padding: 0.6rem 1rem;
+        font-size: 0.9rem;
+    }
+
+    footer {
+        font-size: 0.9rem;
+    }
+}

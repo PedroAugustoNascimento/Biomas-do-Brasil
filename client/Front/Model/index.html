@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amazônia</title>
+    <link rel="stylesheet" href="../reset.css">
+    <link rel="stylesheet" href="model.css">
+    <link rel="stylesheet" href="model-posts.css">
+    <link rel="stylesheet" href="biome-cards.css">
+    <link rel="shortcut icon" type="image/png" href="../img/logo-pag.ico">
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="navbar-container">
+                <a href="../Main/index.html" id="img-nav">
+                    <img src="../img/logo-eco2.png" alt="logo-ecosphere" width=60 height=40>
+                </a>
+                <div id="greeting">
+                    <p></p>
+                </div>
+
+                <div id="Bioms-nav">
+                    <a href="../Main/index.html">Início</a>
+                    <a href="../Caatinga/biomaCaatinga.html">Caatinga</a>
+                    <a href="../Cerrado/biomaCerrado.html">Cerrado</a></li>
+                    <a href="../Mata Atlantica/biomaMatlantica.html">Mata Atlântica</a>
+                    <a href="../Pantanal/biomaPantanal.html">Pantanal</a>
+                    <a href="../Pampa/biomaPampa.html">Pampa</a>
+                    <a href="../Sobrenos/sobre.html">Sobre nós</a>
+                </div>
+
+            </div>
+
+            <button id="menu-btn"><img src="../img/nav-show.png" alt=""></button>
+            <ul id="dropdown-menu" class="hidden">
+                <li><a href="../Login/login.html">Login</a></li>
+                <li><a href="../Perfil/perfil.html">Perfil</a></li>
+                <li><a href="../Login/login.html">Sair</a></li>
+            </ul>
+
+        </nav>
+    </header>
+
+    <main>
+        <div class="carrossel-container">
+            <button class="carrossel-btn prev">&lt;</button>
+            <div class="carrossel">
+                <img src="../img/amazonia1.jpg" alt="Floresta Amazônica">
+                <img src="../img/amazonia2.jpg" alt="Rio na Amazônia">
+                <img src="../img/amazonia3.jpg" alt="Fauna da Amazônia">
+            </div>
+            <button class="carrossel-btn next">&gt;</button>
+        </div>
+
+        <!-- Seção de Informações do Bioma -->
+        <section class="biome-info">
+            <h1 class="biome-title">Amazônia</h1>
+            <div class="info-grid">
+                <div class="info-card description">
+                    <div class="card-icon"></div>
+                    <h2>Introdução</h2>
+                   
+                </div>
+
+                <div class="info-card location">
+                    <div class="card-icon"></div>
+                    <h2>Características Gerais
+                    </h2>
+                    
+                </div>
+
+                <div class="info-card climate">
+                    <div class="card-icon"></div>
+                    <h2>Recursos Naturais e Utilização Humana
+                    </h2>
+                    
+                </div>
+
+                <div class="info-card fauna">
+                    <div class="card-icon"></div>
+                    <h2>Problemas Ambientais
+                    </h2>
+                    
+                </div>
+
+                <div class="info-card flora">
+                    <div class="card-icon"></div>
+                    <h2>Conservação</h2>
+                    
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção de Posts e Comentários -->
+        <section class="posts-section">
+            <h2>Discussões sobre a Amazônia</h2>
+            <div id="posts-container">
+                <!-- Posts serão inseridos aqui dinamicamente -->
+            </div>
+        </section>
+    </main>
+
+   
+    <script src="../scripts.js"></script>
+    <script src="model.js"></script>
+</body>
+
+</html>
+
